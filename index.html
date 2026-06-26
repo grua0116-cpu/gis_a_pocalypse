@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GISA EMERGENCY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+
+    <section class="page active broadcast" id="page-1">
+      <div class="scan"></div>
+      <p class="label">초감각자 통합관리국 긴급재난방송</p>
+      <h1>전국 단위 이상현상 발생</h1>
+      <p>현재 원인 불명의 감각 이상 및 집단 행동 이상 사례가 보고되고 있습니다.</p>
+      <p class="warning">초감각자 여러분께서는 통합관리국의 공식 안내에 따라 주시기 바랍니다.</p>
+      <button onclick="nextPage()">계속 보기</button>
+    </section>
+
+    <section class="page gisa" id="page-2">
+      <div class="scan"></div>
+      <p class="label">GISA EMERGENCY NETWORK</p>
+      <h1>비상사태 선포</h1>
+      <p>초감각자 통합관리국은 현 시각부로 비상 대응 체계를 발동합니다.</p>
+      <p class="code">OPERATION : SILENT ECHO</p>
+      <button onclick="nextPage()">행동강령 확인</button>
+    </section>
+
+    <section class="page gisa" id="page-3">
+      <div class="scan"></div>
+      <p class="label">MANDATORY SURVIVAL PROTOCOL</p>
+      <h1>비상 행동강령</h1>
+      <ol>
+        <li>1.혼자 이동하지 마십시오.</li>
+        <li>2.현혹하는 음성을 따라가지 마십시오.</li>
+        <li>3.오염되지 않은 꿈을 기록하십시오.</li>
+        <li>4.낯선 존재가 자신의 이름을 부르면 대답하지 마십시오.</li>
+        <li>5.이상현상을 목격하면 즉시 보고하십시오.</li>
+      </ol>
+      <button onclick="hijack()">다음</button>
+    </section>
+
+    <section class="page hacked" id="page-4">
+      <div class="noise"></div>
+      <h1 id="hackText">SIGNAL LOST</h1>
+      <p>...</p>
+    </section>
+
+    <section class="page siren" id="page-5">
+      <div class="scan red"></div>
+      <p class="label redText">UNAUTHORIZED TRANSMISSION</p>
+      <h1 class="sirenLogo">S I R E N</h1>
+      <p></p>당신이 듣고 있는 진실은 누가 만든 진실인가? </p>
+      <h2>PROJECT : ECHOER</h2>
+      <p class="code redText">PHASE 1 COMPLETE</p>
+      <p class="redText">SIREN HAS SUNG.</p>
+    </section>
+
+    <section class="page mapPage" id="page-6">
+      <div class="scan red"></div>
+      <p class="label redText">GLOBAL OCCUPATION STATUS</p>
+      <h1>PROJECT : ECHOER</h1>
+
+      <div class="map">
+        <span class="dot seoul">SEOUL</span>
+        <span class="dot tokyo">TOKYO</span>
+        <span class="dot london">LONDON</span>
+        <span class="dot ny">NEW YORK</span>
+        <span class="dot paris">PARIS</span>
+        <span class="dot sydney">SYDNEY</span>
+      </div>
+
+      <div class="barBox">
+        <p>GLOBAL STATUS</p>
+        <div class="bar"><div id="barFill"></div></div>
+        <p><strong id="percent">00%</strong> ACTIVE</p>
+      </div>
+
+      <p class="final">NEXT SIGNAL : PENDING...</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
