@@ -29,35 +29,32 @@
 
     <section class="page gisa" id="page-3">
       <div class="scan"></div>
-      <p class="label">MANDATORY SURVIVAL PROTOCOL</p>
-      <h1>비상 행동강령</h1>
-      <ol>
-        <li>1.혼자 이동하지 마십시오.</li>
-        <li>2.현혹하는 음성을 따라가지 마십시오.</li>
-        <li>3.오염되지 않은 꿈을 기록하십시오.</li>
-        <li>4.낯선 존재가 자신의 이름을 부르면 대답하지 마십시오.</li>
-        <li>5.이상현상을 목격하면 즉시 보고하십시오.</li>
+      <p class="label" id="protocol-label">MANDATORY SURVIVAL PROTOCOL</p>
+      <h1 id="protocol-title">비상 행동강령</h1>
+
+      <ol id="protocol-list">
+        <li id="rule-1">혼자 이동하지 마십시오.</li>
+        <li id="rule-2">현혹하는 음성을 따라가지 마십시오.</li>
+        <li id="rule-3">오염되지 않은 꿈을 기록하십시오.</li>
+        <li id="rule-4">낯선 존재가 자신의 이름을 부르면 대답하지 마십시오.</li>
+        <li id="rule-5">이상현상을 목격하면 즉시 보고하십시오.</li>
       </ol>
-      <button onclick="hijack()">다음</button>
+
+      <p class="infectionLine" id="infection-line"></p>
+      <button id="infectBtn" onclick="infectProtocol()">확인</button>
     </section>
 
-    <section class="page hacked" id="page-4">
-      <div class="noise"></div>
-      <h1 id="hackText">SIGNAL LOST</h1>
-      <p>...</p>
-    </section>
-
-    <section class="page siren" id="page-5">
+    <section class="page siren" id="page-4">
       <div class="scan red"></div>
-      <p class="label redText">UNAUTHORIZED TRANSMISSION</p>
+      <p class="label redText">DOCUMENT CONTAMINATED</p>
       <h1 class="sirenLogo">S I R E N</h1>
-      <p></p>당신이 듣고 있는 진실은 누가 만든 진실인가? </p>
+      <p>당신이 듣고 있는 진실은 누가 만든 진실인가?</p>
       <h2>PROJECT : ECHOER</h2>
       <p class="code redText">PHASE 1 COMPLETE</p>
       <p class="redText">SIREN HAS SUNG.</p>
     </section>
 
-    <section class="page mapPage" id="page-6">
+    <section class="page mapPage" id="page-5">
       <div class="scan red"></div>
       <p class="label redText">GLOBAL OCCUPATION STATUS</p>
       <h1>PROJECT : ECHOER</h1>
