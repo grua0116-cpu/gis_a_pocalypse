@@ -261,3 +261,18 @@ button:hover {
     width: 100%;
   }
 }
+
+.infectionLine {
+  min-height: 40px;
+  margin-top: 28px;
+  color: #ff4b4b;
+  letter-spacing: 0.08em;
+}
+
+#protocol-list li {
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+#protocol-list li:hover {
+  color: #ff7777;
+}
