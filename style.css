@@ -175,30 +175,41 @@ button:hover {
 .dot {
   position: absolute;
   opacity: 0;
-  color: #ff4b4b;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  width: 14px;
+  height: 14px;
   animation: dotOn 0.3s forwards;
 }
 
 .dot::before {
   content: "";
-  display: inline-block;
+  position: absolute;
   width: 13px;
   height: 13px;
-  margin-right: 8px;
   border-radius: 50%;
   background: #ff2a2a;
-  box-shadow: 0 0 20px #ff0000;
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 35px rgba(255,0,0,.8);
 }
 
 .seoul { left: 73%; top: 42%; animation-delay: .5s; }
-.tokyo { left: 80%; top: 48%; animation-delay: 1.3s; }
-.london { left: 47%; top: 31%; animation-delay: 2.1s; }
-.ny { left: 25%; top: 39%; animation-delay: 2.9s; }
-.paris { left: 49%; top: 39%; animation-delay: 3.7s; }
-.sydney { left: 82%; top: 75%; animation-delay: 4.5s; }
+.tokyo { left: 80%; top: 48%; animation-delay: 1.0s; }
+.london { left: 47%; top: 31%; animation-delay: 1.5s; }
+.ny { left: 25%; top: 39%; animation-delay: 2.0s; }
+.paris { left: 49%; top: 39%; animation-delay: 2.5s; }
+.sydney { left: 82%; top: 75%; animation-delay: 3.0s; }
 
+.dot1  { left: 12%; top: 28%; animation-delay: 3.3s; }
+.dot2  { left: 18%; top: 56%; animation-delay: 3.6s; }
+.dot3  { left: 36%; top: 22%; animation-delay: 3.9s; }
+.dot4  { left: 41%; top: 61%; animation-delay: 4.2s; }
+.dot5  { left: 58%; top: 19%; animation-delay: 4.5s; }
+.dot6  { left: 63%; top: 52%; animation-delay: 4.8s; }
+.dot7  { left: 69%; top: 30%; animation-delay: 5.1s; }
+.dot8  { left: 75%; top: 64%; animation-delay: 5.4s; }
+.dot9  { left: 87%; top: 39%; animation-delay: 5.7s; }
+.dot10 { left: 92%; top: 58%; animation-delay: 6.0s; }
 .barBox {
   width: min(640px, 86vw);
 }
