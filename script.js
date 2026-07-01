@@ -69,10 +69,11 @@ function infectProtocol() {
 function countPercent() {
   const percent = document.getElementById("percent");
   const barFill = document.getElementById("barFill");
+
   let n = 0;
 
   const timer = setInterval(() => {
-    n += 1;
+    n++;
 
     percent.textContent = String(n).padStart(2, "0") + "%";
     barFill.style.width = n + "%";
@@ -82,5 +83,5 @@ function countPercent() {
       percent.textContent = "80%";
       barFill.style.width = "80%";
     }
-  }, 40);
+  }, 35);
 }
