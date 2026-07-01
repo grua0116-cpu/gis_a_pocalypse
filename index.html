@@ -8,13 +8,14 @@
 </head>
 <body>
   <main id="app">
+
     <section class="page active broadcast" id="page-1">
       <div class="scan"></div>
       <p class="label">초감각자 통합관리국 긴급재난방송</p>
       <h1>전국 단위 이상현상 발생</h1>
       <p>현재 원인 불명의 감각 이상 및 집단 행동 이상 사례가 보고되고 있습니다.</p>
       <p class="warning">초감각자 여러분께서는 통합관리국의 공식 안내에 따라 주시기 바랍니다.</p>
-      <button type="button" onclick="nextPage()">계속 보기</button>
+      <button onclick="nextPage()">계속 보기</button>
     </section>
 
     <section class="page gisa" id="page-2">
@@ -23,7 +24,7 @@
       <h1>비상사태 선포</h1>
       <p>초감각자 통합관리국은 현 시각부로 비상 대응 체계를 발동합니다.</p>
       <p class="code">OPERATION : SILENT ECHO</p>
-      <button type="button" onclick="nextPage()">행동강령 확인</button>
+      <button onclick="nextPage()">행동강령 확인</button>
     </section>
 
     <section class="page gisa" id="page-3">
@@ -40,7 +41,7 @@
       </ol>
 
       <p class="infectionLine" id="infection-line"></p>
-      <button type="button" id="infectBtn" onclick="infectProtocol()">확인</button>
+      <button id="infectBtn" onclick="infectProtocol()">확인</button>
     </section>
 
     <section class="page siren" id="page-4">
@@ -66,6 +67,7 @@
         <span class="dot ny"></span>
         <span class="dot paris"></span>
         <span class="dot sydney"></span>
+
         <span class="dot dot1"></span>
         <span class="dot dot2"></span>
         <span class="dot dot3"></span>
@@ -80,9 +82,11 @@
 
       <div class="barBox">
         <p>GLOBAL OCCUPATION</p>
+
         <div class="bar">
           <div id="barFill"></div>
         </div>
+
         <p><strong id="percent">00%</strong> OCCUPIED</p>
       </div>
 
@@ -91,6 +95,7 @@
         THE REMAINING 20% WILL FOLLOW.
       </p>
     </section>
+
   </main>
 
   <script src="script.js"></script>
