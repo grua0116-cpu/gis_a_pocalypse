@@ -1,4 +1,5 @@
 let currentPage = 1;
+let percentTimer = null;
 
 function $(id) {
   return document.getElementById(id);
@@ -82,18 +83,26 @@ function countPercent() {
   const percent = $("percent");
   const barFill = $("barFill");
 
-  if (!percent || !barFill) return;
+  if (!percent || !barFill) {
+    console.error("percent 또는 barFill 요소를 찾을 수 없습니다.");
+    return;
+  }
+
+  if (percentTimer) clearInterval(percentTimer);
 
   let n = 0;
+  percent.textContent = "00%";
+  barFill.style.width = "0%";
 
-  const timer = setInterval(() => {
-    n++;
+  percentTimer = setInterval(() => {
+    n += 1;
 
     percent.textContent = String(n).padStart(2, "0") + "%";
     barFill.style.width = n + "%";
 
     if (n >= 80) {
-      clearInterval(timer);
+      clearInterval(percentTimer);
+      percentTimer = null;
       percent.textContent = "80%";
       barFill.style.width = "80%";
     }
