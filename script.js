@@ -1,5 +1,4 @@
 let currentPage = 1;
-let percentTimer = null;
 
 function $(id) {
   return document.getElementById(id);
@@ -75,7 +74,7 @@ function infectProtocol() {
 
   setTimeout(() => {
     showPage(5);
-    countPercent();
+    setTimeout(countPercent, 100);
   }, 12500);
 }
 
@@ -83,26 +82,20 @@ function countPercent() {
   const percent = $("percent");
   const barFill = $("barFill");
 
-  if (!percent || !barFill) {
-    console.error("percent 또는 barFill 요소를 찾을 수 없습니다.");
-    return;
-  }
-
-  if (percentTimer) clearInterval(percentTimer);
+  if (!percent || !barFill) return;
 
   let n = 0;
   percent.textContent = "00%";
   barFill.style.width = "0%";
 
-  percentTimer = setInterval(() => {
-    n += 1;
+  const timer = setInterval(() => {
+    n++;
 
     percent.textContent = String(n).padStart(2, "0") + "%";
     barFill.style.width = n + "%";
 
     if (n >= 80) {
-      clearInterval(percentTimer);
-      percentTimer = null;
+      clearInterval(timer);
       percent.textContent = "80%";
       barFill.style.width = "80%";
     }
