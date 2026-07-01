@@ -224,7 +224,7 @@ button:hover {
   width: 0%;
   height: 100%;
   background: #ff2222;
-  animation: fillBar 5s ease .5s forwards;
+  transition: width 0.08s linear;
 }
 
 .final {
@@ -253,10 +253,6 @@ button:hover {
 
 @keyframes dotOn {
   to { opacity: 1; }
-}
-
-@keyframes fillBar {
-  to { width: 7%; }
 }
 
 @keyframes appear {
