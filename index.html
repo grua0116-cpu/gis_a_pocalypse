@@ -8,14 +8,13 @@
 </head>
 <body>
   <main id="app">
-
     <section class="page active broadcast" id="page-1">
       <div class="scan"></div>
       <p class="label">초감각자 통합관리국 긴급재난방송</p>
       <h1>전국 단위 이상현상 발생</h1>
       <p>현재 원인 불명의 감각 이상 및 집단 행동 이상 사례가 보고되고 있습니다.</p>
       <p class="warning">초감각자 여러분께서는 통합관리국의 공식 안내에 따라 주시기 바랍니다.</p>
-      <button onclick="nextPage()">계속 보기</button>
+      <button type="button" onclick="nextPage()">계속 보기</button>
     </section>
 
     <section class="page gisa" id="page-2">
@@ -24,7 +23,7 @@
       <h1>비상사태 선포</h1>
       <p>초감각자 통합관리국은 현 시각부로 비상 대응 체계를 발동합니다.</p>
       <p class="code">OPERATION : SILENT ECHO</p>
-      <button onclick="nextPage()">행동강령 확인</button>
+      <button type="button" onclick="nextPage()">행동강령 확인</button>
     </section>
 
     <section class="page gisa" id="page-3">
@@ -41,7 +40,7 @@
       </ol>
 
       <p class="infectionLine" id="infection-line"></p>
-      <button id="infectBtn" onclick="infectProtocol()">확인</button>
+      <button type="button" id="infectBtn" onclick="infectProtocol()">확인</button>
     </section>
 
     <section class="page siren" id="page-4">
@@ -51,51 +50,47 @@
       <p>당신이 듣고 있는 진실은 누가 만든 진실인가?</p>
       <h2>PROJECT : ECHOER</h2>
       <p class="code redText">PHASE 1 COMPLETE</p>
-      <p class="redText">SIREN </p>
+      <p class="redText">SIREN</p>
     </section>
 
-   <section class="page mapPage" id="page-5">
-  <div class="scan red"></div>
+    <section class="page mapPage" id="page-5">
+      <div class="scan red"></div>
 
-  <p class="label redText">GLOBAL OCCUPATION STATUS</p>
-  <h1>PROJECT : ECHOER</h1>
+      <p class="label redText">GLOBAL OCCUPATION STATUS</p>
+      <h1>PROJECT : ECHOER</h1>
 
-<div class="map">
-  <span class="dot seoul"></span>
-  <span class="dot tokyo"></span>
-  <span class="dot london"></span>
-  <span class="dot ny"></span>
-  <span class="dot paris"></span>
-  <span class="dot sydney"></span>
+      <div class="map">
+        <span class="dot seoul"></span>
+        <span class="dot tokyo"></span>
+        <span class="dot london"></span>
+        <span class="dot ny"></span>
+        <span class="dot paris"></span>
+        <span class="dot sydney"></span>
+        <span class="dot dot1"></span>
+        <span class="dot dot2"></span>
+        <span class="dot dot3"></span>
+        <span class="dot dot4"></span>
+        <span class="dot dot5"></span>
+        <span class="dot dot6"></span>
+        <span class="dot dot7"></span>
+        <span class="dot dot8"></span>
+        <span class="dot dot9"></span>
+        <span class="dot dot10"></span>
+      </div>
 
-  <span class="dot dot1"></span>
-  <span class="dot dot2"></span>
-  <span class="dot dot3"></span>
-  <span class="dot dot4"></span>
-  <span class="dot dot5"></span>
-  <span class="dot dot6"></span>
-  <span class="dot dot7"></span>
-  <span class="dot dot8"></span>
-  <span class="dot dot9"></span>
-  <span class="dot dot10"></span>
-</div>
+      <div class="barBox">
+        <p>GLOBAL OCCUPATION</p>
+        <div class="bar">
+          <div id="barFill"></div>
+        </div>
+        <p><strong id="percent">00%</strong> OCCUPIED</p>
+      </div>
 
-  <div class="barBox">
-    <p>GLOBAL OCCUPATION</p>
-
-    <div class="bar">
-      <div id="barFill"></div>
-    </div>
-
-    <p><strong id="percent">80%</strong> OCCUPIED</p>
-  </div>
-
-  <p class="final">
-    80% OF HUMANITY HAS ALREADY ACCEPTED THE SIGNAL.<br>
-    THE REMAINING 20% WILL FOLLOW.
-  </p>
-</section>
-
+      <p class="final">
+        80% OF HUMANITY HAS ALREADY ACCEPTED THE SIGNAL.<br>
+        THE REMAINING 20% WILL FOLLOW.
+      </p>
+    </section>
   </main>
 
   <script src="script.js"></script>
